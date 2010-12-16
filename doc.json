@@ -109,7 +109,8 @@
 			"source":"remote_data.md",
 			"template":"guide.html",
 			"description": "Working with Remote Data such as web services, Facebook and YQL.",
-			"menu":"left"
+			"menu":"left",
+			"inprogress":true
 		},
 		{
 			"section":"Architecture",
@@ -126,7 +127,17 @@
 			"source":"location.md",
 			"template":"guide.html",
 			"description": "Understanding how to use location services such as GPS in your Titanium application.",
-			"menu":"left"
+			"menu":"left",
+			"inprogress":true
+		},
+		{
+			"section":"Architecture",
+			"name":"Push Notifications",
+			"source":"push_notifications.md",
+			"template":"guide.html",
+			"description": "Understanding how to use Apple Push Notification Services (APNS) in your Titanium application.",
+			"menu":"left",
+			"inprogress":true
 		},
 		{
 			"section":"Architecture",
@@ -205,7 +216,8 @@
 			"source":"testing.md",
 			"template":"guide.html",
 			"description": "Understanding how to test your Titanium applications.",
-			"menu":"right"
+			"menu":"right",
+			"inprogress":true
 		},
 		{
 			"section":"Tools",
@@ -240,15 +252,6 @@
 			"menu":"right"
 		},
 		{
-			"section":"Tutorials",
-			"name":"Building Reusable Factories",
-			"source":"factories.md",
-			"template":"guide.html",
-			"description":"Techniques for building reusable code and libraries.",
-			"menu":"right",
-			"inprogress":true
-		},
-		{
 			"section":"FAQ",
 			"name":"Frequently Asked Questions",
 			"source":"faq.md",
@@ -271,7 +274,8 @@
 			"source":"module_android.md",
 			"template":"guide.html",
 			"description": "Extending Titanium with the Android Module Developer Guide",
-			"menu":"right"
+			"menu":"right",
+			"inprogress":true
 		},
 		{
 			"section":"Extending Titanium",
@@ -279,6 +283,15 @@
 			"source":"javascript_frameworks.md",
 			"template":"guide.html",
 			"description":"Extending Titanium with JavaScript Frameworks",
+			"menu":"right",
+			"inprogress":true
+		},
+		{
+			"section":"Extending Titanium",
+			"name":"Building Reusable Factories",
+			"source":"factories.md",
+			"template":"guide.html",
+			"description":"Techniques for building reusable code and libraries.",
 			"menu":"right",
 			"inprogress":true
 		}
