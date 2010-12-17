@@ -9,13 +9,12 @@ This guide covers using Apple Push Notification Services (APNS) with Urban Airsh
 
 </summary>
 
-
-### Create your Application
+# Create your Application
 Create your application using Titanium Developer - make sure that you take note of your appid
 
 ![create app in titanium](../assets/images/guides/push_notifications/08.png)
 
-### Configure Your Application with Apple Provisioning
+# Configure Your Application with Apple Provisioning
 Log into Apple's provisioning portal and create a new appid.  Take note of your bundle identifier or appid, use the same one form the last step
 
 ![provision app with apple](../assets/images/guides/push_notifications/01.png)
@@ -61,7 +60,7 @@ You will be prompted for a passphrase for the p12 file, you should definitely pu
 ![enter passphrase](../assets/images/guides/push_notifications/13.png)
 
 
-### Setting up your Urban Airship account
+# Setting up your Urban Airship account
 Register for an account on [http://urbanairship.com](http://urbanairship.com).  Once you've logged in, click the apps tab and at the bottom, fill in your "Application name" - your appid from before.  Also click and include your p12 export from the last step as your "Apple push certificate".  Dont forget your passphrase for the "Certificate Password".  Click "creat your app".
 
 ![configure urban app](../assets/images/guides/push_notifications/14.png)
@@ -77,7 +76,7 @@ In the details tab of your application, click the show link next to these entrie
 
 ![get urban keys](../assets/images/guides/push_notifications/16.png)
 
-### How to consume APNS messages in your Application
+# How to consume APNS messages in your Application
 We are now ready to code the application (finally).  In your application, put in the logic to consume APNS messages.  We have written a wrapper object for urban airship's webservice and included the javascript file as [urbanairship.js](../assets/javascripts/guides/push_notifications/urbanairship.js) the [app.js](../assets/javascripts/guides/push_notifications/app.js) is also provided as well.  For a full listing of the webservice API check out the docs at [http://urbanairship.com/docs/](http://urbanairship.com/docs/).  
 
 You will need to setup the UrbanAirship object replacing the "xxx" values with your keys from the last section.
@@ -131,7 +130,7 @@ Ti.Network.registerForPushNotifications({
 ~~~
 
 
-### Sending Push Notifications to Urban Airship
+# Sending Push Notifications to Urban Airship
 To test this, you cannot run your application in the emulator - push notifications must be run on a phone.  First launch your application on your device and enter in a simple alias name (ex: 'az') and click the register button.  
 
 <img src="../assets/images/guides/push_notifications/19.png" height="450" width="300" alt="run app">
@@ -153,7 +152,7 @@ You should see something like this on your device
 
 Obviously using the Urban Airship admin to send messages is not something that you will probably do in production.  Urban Aiship has exposed a RESTful service that you can remotely invoke.  For more information on how to send messages to Urban Airship, check out [http://urbanairship.com/docs/](http://urbanairship.com/docs/). 
 
-### Additional things that you can do with Urban Airship
+# Additional things that you can do with Urban Airship
 Now that we have covered the basics of consuming and registering for APNS messages, there are a couple of notes that can be made.  Most likely when you register with urban airship, you will want to associate the device with an user account when the user signs in to your application.  This is what the **alias** attribute could be used for.  This way when you are sending messages to one of your users, you do not have to worry about tracking device tokens, etc and can just send a notification to that user.
 
 Likewise you may also have multiple versions of your application deployed and want to send messages based on the application version.  For that reason we suggest including the **tags** attribute when registering.

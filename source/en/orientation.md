@@ -1,30 +1,31 @@
 <summary>
-	This document provides guidelines on how support different device orientations.
+	This document provides guidelines on how support device orientations.
 </summary>
 
 
-# Basics of Supporting Different Orientations
+# Supporting Device Orientations
 
-Application support of both portrait and landscape orientations is an Apple requirement for iPad apps,
-while it is completely optional for the iPhone.
+Mobile devices can be held in a number of different orientations, especially the iPad.  This guide should help you support 
+multiple device orientations in your mobile application
 
-iPad orientation support starts with two versions of the Splash screen image: for landscape and portrait mode.
-The formet should have 1024x768 dimensions, the later – 768x1024. Corresponding files MUST be placed into 
-Resources/iphone folder and named as follows:
+# The Splash Screen
+
+iPad orientation support starts with two versions of the Splash screen image - one for landscape and one for portrait mode.
+The landscape image should measure 1024 pixels by 768 pixels, with the portrait image being 768px by 1024px. Corresponding files 
+must be placed into Resources/iphone folder and named as follows:
 
 * Default-Landscape.png
 * Default-Portrait.png
 
-Please pay the special attention to the case of the first letters: misspelled images
-would not load on the actual device (however you will see them in the case-insensitive emulator).
+Image names are case-sensitive.
 
 <note>
-You do not need any of the mentioned files on the iPhone apps; so in this case the splash screen image
-MUST be named Default.png even if your application is intended to work in both orientation.
+Landscape and portrait splash images are iPad only - Android and iPhone splash screen images
 </note>
 
-Next, only if you are using Titanium Mobile SDK 1.5.0 or later, go to the tiapp.xml file in the root project
-directory and make sure that it contains the following lines:
+# Default Orientations
+
+As of Titanium Mobile 1.5, there are a number of default orientations available for iOS applications:
 
 <code class="xml">
 	<iphone>
@@ -43,16 +44,16 @@ directory and make sure that it contains the following lines:
 
 # Run-time Device Orientation Detection 
 
-You can easily detect the current device orientation by checking value of the Ti.UI.orientation property.
-This value equals to one of the orientation constants defined under Ti.UI namespace:
+You can detect the current device orientation by checking value of the Ti.UI.orientation property.
+This value will match one of the orientation constants defined under the Ti.UI namespace:
 
 * Ti.UI.PORTRAIT
 * Ti.UI.UPSIDE_PORTRAIT
 * Ti.UI.LANDSCAPE_LEFT
 * Ti.UI.LANDSCAPE_RIGHT
 
-As you can see, there are two constants corresponding to landscape and portrait orientation, and we can
-write some functions to automatise our checks:
+An example use of this property might be to define helper functions to determine if the device is in a landscape
+or portrait orientation:
 
 <code class="javascript">
 	Ti.Gesture.isLandscape = function (orient) {
@@ -68,42 +69,26 @@ write some functions to automatise our checks:
 	};
 </code>
 
-You can put the above code inside a separate ti-ext.js file, which you may reuse across different projects.
-Now, it is really simple to detect the device orientation from anywhere in the code:
-
-<code class="javascript">
-	if (Ti.Gesture.isLandscape()) {
-		alert("I am in landscape orientation!");
-	} else {
-		alert("I am in portrait orientation!");
-	}
-</code>
-
-If you have noticed, we are anticipating a single argument for the functions. Basically, if you will call them
-without any arguments, they will return current device orientation. From the other hand, you can also provide them
-with an argument, which can be useful in handling orientation change events.
-
 
 # Handling Orientation Changes
 
-Orientation changes can be detected by attaching an event listener for orientationchange event of Ti.Gesture module:
+Orientation changes can be detected by attaching an event listener for orientationchange event in the Ti.Gesture module:
 
 <code class="javascript">
-	Ti.Gesture.addEventListener('orientationchange', function (ev) {
+	Ti.Gesture.addEventListener('orientationchange', function (e) {
 		// Put your handling code here
 	});
 </code>
 
-The updated device orientation can be read from orientation property of the supplied event object.
-Its value is one of the constant defined in Ti.UI module:
+The updated device orientation can be read from `orientation` property of the event object passed to the callback, which will
+be defined as one of:
 
 * Ti.UI.PORTRAIT
 * Ti.UI.UPSIDE_PORTRAIT
 * Ti.UI.LANDSCAPE_LEFT
 * Ti.UI.LANDSCAPE_RIGHT
 
-If you are using our Ti.Gesture extension proposed in the previous section of the article then you can easily
-check when your device come into landscape or portrait mode without hardcoding the mentioned constants each time:
+Using our helper function above, you might use the following code to redraw your application UI based on device orientation:
 
 <code class="javascript">
 	Ti.Gesture.addEventListener('orientationchange', function (ev) {
@@ -116,32 +101,27 @@ check when your device come into landscape or portrait mode without hardcoding t
 </code>
 
 
-# Changing Device Orientation Programatically
+# Changing Device Orientation Programmatically
 
-There are two main ways of changing the device orientation: by modifying Ti.UI global value
-and limiting the number of supported orientations for a given window object.
+There are two ways of changing the device orientation in JavaScript.  One can modify Ti.UI global value
+or limit the number of supported orientations for a given window object.
 
 ## Changing the global orientation
 
 First, you can change it directly by updating the value of Ti.UI.orientation property
-with the appropriate orientation constant
+with the appropriate orientation constant:
 
 <code class="javascript">
 	Ti.UI.orientation = Ti.UI.PORTRAIT;
 </code>
 
 This approach is recommended if you need to permanently change device orientation and
-stick to it. In fact, you can do the same using *orientation* section of the *tiapp.xml* file,
-as described in the first section of the article. This will be even more preferable, since will
-allow some flexibility to support both left/right landscape orientations (or normal and upside down
-portrait), so user would be able to flip the device in his hands.
+stick to it. You can accomplish the same thing using the *orientation* section of the *tiapp.xml* file (for iOS).
 
-For temporal orientation changes we recommend to use the second option:
+## Limiting supported orientation modes for a given window
 
-## Limiting supported orientation modes for a given windows
-
-You can limit allowed orientation for the given Window object. Then device will
-go into the desired orientation whenever the window is opened on the screen
+You can limit allowed orientations for a `Window` object. Then device will go into the desired orientation whenever 
+the window is opened:
 
 <code class="javascript">
 	var win = Ti.UI.createWindow({ 
@@ -159,7 +139,7 @@ or Ti.UI.currentTab.open(win) the device will go landscape. Whenever you close c
 (or user navigate back using navigation controller) the screen will return back to the actual
 physical orientation of the device.
 
-Of course you can also update orientationModes of the already existing windows (including the opened one):
+You can also update `orientationModes` of existing windows (including the opened one):
 
 <code class="javascript">
 	Ti.UI.currentWindow.orientationModes = [
