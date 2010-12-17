@@ -246,6 +246,14 @@
 		},
 		{
 			"section":"Tutorials",
+			"name":"Titanium Sample Code",
+			"source":"sample_code.md",
+			"template":"guide.html",
+			"description": "A listing of Titanium Sample Code",
+			"menu":"right"
+		},
+		{
+			"section":"Tutorials",
 			"name":"Titanium Tutorials",
 			"source":"tutorials.md",
 			"template":"guide.html",
