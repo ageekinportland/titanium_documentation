@@ -8,9 +8,11 @@
 
 # Database
 
-* [sqlite.org](http://www.sqlite.org/cvstrac/wiki?p=ManagementTools) List of Management Tools
+* [sqlite.org Management Tool List](http://www.sqlite.org/cvstrac/wiki?p=ManagementTools)
 * [SQLite Expert](http://www.sqliteexpert.com/features.html) (Free and Commercial versions)
 * [Sequel Pro](http://www.sequelpro.com/) for OSX
+* [ERMaster](http://ermaster.sourceforge.net/) Eclipse Plugin Entity Relationship Tool (free)
+* [Clay Mark II](http://www.azzurri.jp/) Eclipse Plugin Entity Relationship Tool (free and commercial)
 
 # Debugging
 
@@ -20,6 +22,7 @@
 
 * [Textmate Bundle](http://developer.appcelerator.com/blog/2010/06/titanium-mobile-textmate-bundle.html)
 * [Eclipse Autocomplete](http://jameslow.com/2010/05/31/titanium-autocomplete-eclipse/)
+* [Eclipse ADT](http://developer.android.com/sdk/eclipse-adt.html)
 * [Scite4Titanium 1.3 and Notepad++ Titanium Plugin](http://docs.google.com/View?id=dfrprrw7_19cvmjqkck)
 * [Visual Studio Doc Plugin](http://www.jeremymelton.com/blog/2010/10/appcelerator-titanium-vsdoc-for-visual-studio/)
 * [Livetanium](http://blog.krawaller.se/livetanium)
