@@ -55,7 +55,7 @@ In spite of their unwavering good nature, Helpers in the Q&A like an easy life j
 
 Your question is competing with many others for the attention of a Helper, so they aren't likely to wait around long enough to request information you've left out. Even if they do, do you really want the delay?
 
-<info>Tip: Include all the relevant information in your original post. And, yes, mobile platform and Titanium SDK version are almost always relevant!</info>
+<info>Tip: Include all the relevant information in your original post. And, yes, mobile platform and version and Titanium SDK version are almost always relevant!</info>
 
 If you include some code that demonstrates your issue, you not only increase your chances of getting an answer, but also of getting the correct answer more quickly.
 
@@ -155,7 +155,7 @@ Thus, you must first electronically sign the [CLA](http://bit.ly/app_cla) before
 
 In order to build one of the Titanium software projects, for example `titanium_mobile`, you will need the following tools:
 
-* Python 2.6+ 
+* Python 2.6+
 * SCons
 * Platform SDKs such as Android, iOS (if building on OSX), etc.
 
@@ -192,7 +192,7 @@ To contribute to the iOS SDK, you will need to know Objective-C. Refer to the [M
 
 In order to generate one of Titanium's documentation projects, such as `titanium_documentation`, you will need the following tools:
 
-* Python 2.6+ 
+* Python 2.6+
 * mako
 * markdown
 
