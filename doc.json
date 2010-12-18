@@ -96,52 +96,10 @@
 		},
 		{
 			"section":"Architecture",
-			"name":"Working with Local Data",
-			"source":"local_data.md",
+			"name":"Application Performance Optimizations",
+			"source":"performance.md",
 			"template":"guide.html",
-			"description": "Working with Local Data such as files, databases and properties.",
-			"menu":"left",
-			"inprogress":true
-		},
-		{
-			"section":"Architecture",
-			"name":"Working with Remote Data",
-			"source":"remote_data.md",
-			"template":"guide.html",
-			"description": "Working with Remote Data such as web services, Facebook and YQL.",
-			"menu":"left"
-		},
-		{
-			"section":"Architecture",
-			"name":"Using multimedia capabilities",
-			"source":"media.md",
-			"template":"guide.html",
-			"description": "Understanding how to use multimedia such as video and audio in your Titanium application.",
-			"menu":"left",
-			"inprogress":true
-		},
-		{
-			"section":"Architecture",
-			"name":"Using Location services",
-			"source":"location.md",
-			"template":"guide.html",
-			"description": "Understanding how to use location services such as GPS in your Titanium application.",
-			"menu":"left"
-		},
-		{
-			"section":"Architecture",
-			"name":"Using TableViews",
-			"source":"tableviews.md",
-			"template":"guide.html",
-			"description": "Understanding how to use TableViews in your Titanium application.",
-			"menu":"left"
-		},
-		{
-			"section":"Architecture",
-			"name":"Using HTML5 webviews",
-			"source":"webviews.md",
-			"template":"guide.html",
-			"description": "Understanding how to use HTML5 webviews in your Titanium application.",
+			"description": "Understanding how to optimize your Titanium application to make it run fast, use less memory and perform well.",
 			"menu":"left",
 			"inprogress":true
 		},
@@ -155,22 +113,79 @@
 			"inprogress":true
 		},
 		{
-			"section":"Architecture",
-			"name":"How to Internationalize your Application",
-			"source":"internationalization.md",
+			"section":"Everyday Titanium",
+			"name":"Working with Local Data",
+			"source":"local_data.md",
 			"template":"guide.html",
-			"description": "Understanding how to make your Titanium application available to other languages and locales.",
+			"description": "Working with Local Data such as files, databases and properties.",
 			"menu":"left",
 			"inprogress":true
 		},
 		{
-			"section":"Architecture",
-			"name":"Application Performance Optimizations",
-			"source":"performance.md",
+			"section":"Everyday Titanium",
+			"name":"Working with Remote Data",
+			"source":"remote_data.md",
 			"template":"guide.html",
-			"description": "Understanding how to optimize your Titanium application to make it run fast, use less memory and perform well.",
+			"description": "Working with Remote Data such as web services, Facebook and YQL.",
+			"menu":"left"
+		},
+		{
+			"section":"Everyday Titanium",
+			"name":"Using multimedia capabilities",
+			"source":"media.md",
+			"template":"guide.html",
+			"description": "Understanding how to use multimedia such as video and audio in your Titanium application.",
 			"menu":"left",
 			"inprogress":true
+		},
+		{
+			"section":"Everyday Titanium",
+			"name":"Using Location services",
+			"source":"location.md",
+			"template":"guide.html",
+			"description": "Understanding how to use location services such as GPS in your Titanium application.",
+			"menu":"left"
+		},
+		{
+			"section":"Everyday Titanium",
+			"name":"Push Notifications",
+			"source":"push_notifications.md",
+			"template":"guide.html",
+			"description": "Understanding how to use Apple Push Notification Services (APNS) in your Titanium application.",
+			"menu":"left"
+		},
+		{
+			"section":"Everyday Titanium",
+			"name":"Using TableViews",
+			"source":"tableviews.md",
+			"template":"guide.html",
+			"description": "Understanding how to use TableViews in your Titanium application.",
+			"menu":"left"
+		},
+		{
+			"section":"Everyday Titanium",
+			"name":"Using HTML5 webviews",
+			"source":"webviews.md",
+			"template":"guide.html",
+			"description": "Understanding how to use HTML5 webviews in your Titanium application.",
+			"menu":"left",
+			"inprogress":true
+		},
+		{
+			"section":"Everyday Titanium",
+			"name":"Internationalizing your Application",
+			"source":"internationalization.md",
+			"template":"guide.html",
+			"description": "Understanding how to make your Titanium application available to other languages and locales.",
+			"menu":"left"
+		},
+		{
+			"section":"Everyday Titanium",
+			"name":"Handling Device Orientation",
+			"source":"orientation.md",
+			"template":"guide.html",
+			"description": "Understanding how to react to different device orientations",
+			"menu":"left"
 		},
 		{
 			"section":"Tools",
@@ -225,6 +240,14 @@
 		},
 		{
 			"section":"Tutorials",
+			"name":"Titanium Sample Code",
+			"source":"sample_code.md",
+			"template":"guide.html",
+			"description": "A listing of Titanium Sample Code",
+			"menu":"right"
+		},
+		{
+			"section":"Tutorials",
 			"name":"Titanium Tutorials",
 			"source":"tutorials.md",
 			"template":"guide.html",
@@ -238,15 +261,6 @@
 			"template":"guide.html",
 			"description": "Walks thru building a basic animation example and provides full source",
 			"menu":"right"
-		},
-		{
-			"section":"Tutorials",
-			"name":"Building Reusable Factories",
-			"source":"factories.md",
-			"template":"guide.html",
-			"description":"Techniques for building reusable code and libraries.",
-			"menu":"right",
-			"inprogress":true
 		},
 		{
 			"section":"FAQ",
@@ -279,8 +293,15 @@
 			"source":"javascript_frameworks.md",
 			"template":"guide.html",
 			"description":"Extending Titanium with JavaScript Frameworks",
-			"menu":"right",
-			"inprogress":true
+			"menu":"right"
+		},
+		{
+			"section":"Extending Titanium",
+			"name":"Building Reusable Factories",
+			"source":"factories.md",
+			"template":"guide.html",
+			"description":"Techniques for building reusable code and libraries.",
+			"menu":"right"
 		}
 	],
 	"statics":

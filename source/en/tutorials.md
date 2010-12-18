@@ -26,6 +26,8 @@
 * [Creating a tooltip](http://cssgallery.info/create-a-nifty-tooltip-in-titanium/)
 * [Custom table view rows](http://cssgallery.info/custom-row-for-tableview-in-appcelerator-titanium/)
 * [Push Notifications with Urban Airship](http://blog.urbanairship.com/blog/2010/05/26/appcelerator-and-urban-airship/)
+* [Displaying Custom Fonts](http://bit.ly/e8xgFw)
+* [Creating iPhone Transitions](http://bit.ly/aUAZfA)
 
 
 # Reporting other tutorials
