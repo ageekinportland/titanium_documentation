@@ -127,8 +127,7 @@
 			"source":"remote_data.md",
 			"template":"guide.html",
 			"description": "Working with Remote Data such as web services, Facebook and YQL.",
-			"menu":"left",
-			"inprogress":true
+			"menu":"left"
 		},
 		{
 			"section":"Everyday Titanium",
@@ -145,8 +144,7 @@
 			"source":"location.md",
 			"template":"guide.html",
 			"description": "Understanding how to use location services such as GPS in your Titanium application.",
-			"menu":"left",
-			"inprogress":true
+			"menu":"left"
 		},
 		{
 			"section":"Everyday Titanium",
@@ -154,8 +152,7 @@
 			"source":"push_notifications.md",
 			"template":"guide.html",
 			"description": "Understanding how to use Apple Push Notification Services (APNS) in your Titanium application.",
-			"menu":"left",
-			"inprogress":true
+			"menu":"left"
 		},
 		{
 			"section":"Everyday Titanium",
@@ -180,8 +177,7 @@
 			"source":"internationalization.md",
 			"template":"guide.html",
 			"description": "Understanding how to make your Titanium application available to other languages and locales.",
-			"menu":"left",
-			"inprogress":true
+			"menu":"left"
 		},
 		{
 			"section":"Everyday Titanium",
@@ -189,8 +185,7 @@
 			"source":"orientation.md",
 			"template":"guide.html",
 			"description": "Understanding how to react to different device orientations",
-			"menu":"left",
-			"inprogress":true
+			"menu":"left"
 		},
 		{
 			"section":"Tools",
@@ -225,8 +220,7 @@
 			"source":"testing.md",
 			"template":"guide.html",
 			"description": "Understanding how to test your Titanium applications.",
-			"menu":"right",
-			"inprogress":true
+			"menu":"right"
 		},
 		{
 			"section":"Tools",
@@ -291,8 +285,7 @@
 			"source":"module_android.md",
 			"template":"guide.html",
 			"description": "Extending Titanium with the Android Module Developer Guide",
-			"menu":"right",
-			"inprogress":true
+			"menu":"right"
 		},
 		{
 			"section":"Extending Titanium",
@@ -300,8 +293,7 @@
 			"source":"javascript_frameworks.md",
 			"template":"guide.html",
 			"description":"Extending Titanium with JavaScript Frameworks",
-			"menu":"right",
-			"inprogress":true
+			"menu":"right"
 		},
 		{
 			"section":"Extending Titanium",
@@ -309,8 +301,7 @@
 			"source":"factories.md",
 			"template":"guide.html",
 			"description":"Techniques for building reusable code and libraries.",
-			"menu":"right",
-			"inprogress":true
+			"menu":"right"
 		}
 	],
 	"statics":
