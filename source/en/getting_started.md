@@ -78,14 +78,14 @@ Before doing any sort of Android development, you will need [Sun/Oracle Java SDK
 installed on your system.  Note that this is NOT the same as the Java Runtime Environment (JRE) installed on many computers.
 
 <info>
-Before you install anything, search your system for the `java` and `javac` executables, to determine whether they are already installed and are of the correct vendor and minimum version, which is Sun/Oracle 32-bit SDK 1.6. When found, run these commands:
+The JDK that is currently supported is **Sun/Oracle 32-bit JDK 6** (also known as 1.6). Before you install anything, search your system for the `java` and `javac` executables, to determine whether they are already installed and are of the correct vendor and minimum version. When found, run these commands:
 
 ~~~
 /path/to/java -version
 /path/to/javac -version
 ~~~
 
-If you have multiple versions installed, you will need to ensure that the correct one is being used by default. To do this, run the following without the full path, and compare the results to those produced above:
+If you have multiple versions installed, you will need to ensure that the correct one is being used by default. To do this, run the same commands without the full path, and compare the results to those produced above:
 
 ~~~
 java -version
