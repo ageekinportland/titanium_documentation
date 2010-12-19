@@ -302,7 +302,15 @@
 			"template":"guide.html",
 			"description":"Techniques for building reusable code and libraries.",
 			"menu":"right"
-		}
+		},
+		{
+			"section":"Building Titanium Mobile",
+			"name":"Building Titanium Mobile - OSX",
+			"source":"building_titanium_mobile_osx.md",
+			"template":"guide.html",
+			"description":"How to build Titanium Mobile for OSX.",
+			"menu":"right"
+		}		
 	],
 	"statics":
 	[
