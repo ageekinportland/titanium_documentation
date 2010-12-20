@@ -78,7 +78,7 @@ Similarly to the iOS example, if we were creating a button in code (or referenci
 use `myButton.png`:
 
 	var myButton = Ti.UI.createButton({
-		backgroundImage:'myButton.png'
+		backgroundImage:'images/myButton.png'
 	});
 
 # Special Resources

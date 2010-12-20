@@ -1,37 +1,104 @@
-HowTo: Build Titanium Mobile on OS X
-====================================
+<summary>
+This guide covers how to build Titanium Mobile on Mac OS X. In this guide, you should learn the following:
+    
+* Getting your system setup to build Titanium Mobile
+* Installing the iOS SDK
+* Installing the Android SDK
 
-These instructions will guide you through setting up an OS X box for use with Titanium Mobile. The focus is installing the tools in locations that will work for the build system. This same configuration can be used to develop with Appcelerator released mobile SDKs.
+</summary>
 
->Note: Instructions and screen shots are from Snow Leopard.
+<note>
+Instructions and screen shots are from Snow Leopard.
+</note>
 
-Requirements
-============
 
-For Developing Mobile Apps
---------------------------
+Requirements For Building Titanium Mobile
+===========================================
 
-### Required for iPhone
-
-- iPhone SDK
-
-### Required for Android
-
-- Sun Java Development Kit 6 (aka JDK 1.6) 
-- Android Development Kit
-
-For Building Titanium Mobile
-----------------------------
-
-- **Requirements from Developing Mobile Apps, plus**
 - Python 2.5/2.6 _already installed_
 - Scons 1.2.0.x
 - Git 1.6.X
 
+Installation for Building Titanium Mobile
+=========================================
+
+Building Titanium Mobile from source is straight-forward and relatively simple. We need a few tools installed: Python, Scons, and Git. Scons is a build utility written in Python and Git allows you to pull the source from the Appcelerator repository on GitHub.
+
+Install Python 2.5/2.6
+----------------------
+
+Python is installed by default.
+
+### Verify the Python Install
+
+From a new command window, execute the following command.
+
+- `python --version`
+
+You should see something similar to the image below.
+
+![Verifying python install](http://img.skitch.com/20091130-qfrtyii39mqaurdc2g1a6fxwmw.png)
+
+Install Scons 1.2.0.x
+---------------------
+
+First, find the latest scons version - right now, it's 1.2.0.1.2.0.d20090919. [Download](http://sourceforge.net/projects/scons/files/scons/1.2.0.d20090919/scons-1.2.0.d20090919.zip/download) Then, install scons using the following commands:
+
+~~~
+unzip scons-1.2.0.d20090919.zip
+cd scons-1.2.0.d20090919
+sudo python setup.py install
+~~~
+
+### Verify the Scons Install
+
+In the command window, execute the following command.
+
+- `scons -version`
+
+You should see something similar to the output below.
+
+~~~
+$ scons -version
+SCons by Steven Knight et al.:
+	script: v1.2.0.d20090919.r4369[MODIFIED], 2009/09/19 16:58:54, by scons on scons-dev
+	engine: v1.2.0.d20090919.r4369[MODIFIED], 2009/09/19 16:58:54, by scons on scons-dev
+Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 The SCons Foundation
+
+~~~
+
+![Scons install verification](http://img.skitch.com/20091130-psdhexup6mkmyc2ch1ekqqtn8e.png)
+
+Install Git 1.6.X
+-----------------
+
+Download Git from [here](http://git-osx-installer.googlecode.com/files/git-1.6.5.2-intel-leopard.dmg). If that link is broken go to the main [download page](http://git-scm.com/download) and get the Intel binary.
+
+Install Git using the following command by executing `git-1.6.5-2.intel-leopard.pkg` and then executing `setup git PATH for non-terminal programs.sh`
+
+[Git installer](http://img.skitch.com/20091130-enakrg3k3d7iuxu8ej5pt7k5y7.png) 
+
+### Verify the Git Install
+
+In the command window, execute the following command.
+
+- `git --version`
+
+You should see something similar to the image below.
+
+![Git install verification](http://img.skitch.com/20091130-rmywe4e2sr3qne1xpecuby36w6.png)
+
+
+
+
+
+
+
+
 Overview
 ========
 
-The Titanium Mobile development environment on OSX requires iPhone SDKs for Versions **NEED VERSIONS**, Java, the Android Development Kit (ADK), and specific platform packages in the ADK. If you plan on developing applications for only one platform then you only need that platforms tools.
+The Titanium Mobile development environment on O SX requires iPhone SDKs, Java, the Android Development Kit (ADK), and specific platform packages in the ADK. If you plan on developing applications for only one platform then you only need that platforms tools.
 
 ### Working with iPhone
 
@@ -148,74 +215,7 @@ Developing for Android Installation Complete
 
 All the tools necessary for using the ADK with Titanium Developer are in place. When you create a Titanium Mobile application, Developer will be able to find the tools it needs to compile your application, run the emulator, and install your app.
 
-Installation for Building Titanium Mobile
-=========================================
 
-Building Titanium Mobile from source is straight-forward and relatively simple. We need a few tools installed: Python, Scons, and Git. Scons is a build utility written in Python and Git allows you to pull the source from the Appcelerator repository on GitHub.
-
-Install Python 2.5/2.6
-----------------------
-
-Python is installed by default.
-
-### Verify the Python Install
-
-From a new command window, execute the following command.
-
-- `python --version`
-
-You should see something similar to the image below.
-
-![Verifying python install](http://img.skitch.com/20091130-qfrtyii39mqaurdc2g1a6fxwmw.png)
-
-Install Scons 1.2.0.x
----------------------
-
-First, find the latest scons version - right now, it's 1.2.0.1.2.0.d20090919. [Download](http://sourceforge.net/projects/scons/files/scons/1.2.0.d20090919/scons-1.2.0.d20090919.zip/download) Then, install scons using the following commands:
-
-~~~
-unzip scons-1.2.0.d20090919.zip
-cd scons-1.2.0.d20090919
-sudo python setup.py install
-~~~
-
-### Verify the Scons Install
-
-In the command window, execute the following command.
-
-- `scons -version`
-
-You should see something similar to the output below.
-
-~~~
-$ scons -version
-SCons by Steven Knight et al.:
-	script: v1.2.0.d20090919.r4369[MODIFIED], 2009/09/19 16:58:54, by scons on scons-dev
-	engine: v1.2.0.d20090919.r4369[MODIFIED], 2009/09/19 16:58:54, by scons on scons-dev
-Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 The SCons Foundation
-
-~~~
-
-![Scons install verification](http://img.skitch.com/20091130-psdhexup6mkmyc2ch1ekqqtn8e.png)
-
-Install Git 1.6.X
------------------
-
-Download Git from [here](http://git-osx-installer.googlecode.com/files/git-1.6.5.2-intel-leopard.dmg). If that link is broken go to the main [download page](http://git-scm.com/download) and get the Intel binary.
-
-Install Git using the following command by executing `git-1.6.5-2.intel-leopard.pkg` and then executing `setup git PATH for non-terminal programs.sh`
-
-[Git installer](http://img.skitch.com/20091130-enakrg3k3d7iuxu8ej5pt7k5y7.png) 
-
-### Verify the Git Install
-
-In the command window, execute the following command.
-
-- `git --version`
-
-You should see something similar to the image below.
-
-![Git install verification](http://img.skitch.com/20091130-rmywe4e2sr3qne1xpecuby36w6.png)
 
 Building Titanium Mobile Installation Complete
 ==============================================

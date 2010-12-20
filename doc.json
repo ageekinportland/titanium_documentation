@@ -305,11 +305,12 @@
 		},
 		{
 			"section":"Building Titanium Mobile",
-			"name":"Building Titanium Mobile - OSX",
+			"name":"Building Titanium Mobile on Mac OS X",
 			"source":"building_titanium_mobile_osx.md",
 			"template":"guide.html",
-			"description":"How to build Titanium Mobile for OSX.",
-			"menu":"right"
+			"description":"How to build Titanium Mobile for Mac OS X.",
+			"menu":"right",
+			"inprogress":true
 		}		
 	],
 	"statics":

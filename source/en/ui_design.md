@@ -45,7 +45,7 @@ In Titanium, we could move it on screen with a shake with the following example:
     });
 </code>
 
-In the above code, each Titanium the device receives a `shake` gesture event, the view will animate by sliding down 40 pixels over a 1/2 second duration.
+In the above code, each time the device receives a `shake` gesture event, the view will animate by sliding down 40 pixels over a 1/2 second duration.
 
 ## Default position
 
