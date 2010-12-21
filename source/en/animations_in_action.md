@@ -3,28 +3,28 @@ In this guide, you will learn about how to work with animations and transformati
 By the end of this guide, you should understand:
 
 * Point to point animations
-* Animating an elements opacity
+* Animating an element's opacity
 * The basics of working with transforms
 
 </summary>
 #Before we start
 
-This tutorial assumes a basic understanding of animations.  For a general introduction to animations please review the [Animation section](ui_design.html#animation).
+This tutorial assumes a basic understanding of animations.  For a general introduction to animations, please review the [Animation section](ui_design.html#animation).
 
-The below video shows what we will obtain at the end of this tutorial.
+The video below shows what we will obtain at the end of this tutorial.
 
 <iframe src="http://player.vimeo.com/video/17666446?title=0&amp;byline=0&amp;portrait=0&amp;color=9a0707&amp;autoplay=1" width="640" height="480" frameborder="0"></iframe>
 
 #Setting up for Animations
 
-First of all we need a UI element to animate.  In this tutorial we will demonstrate animating **labels** and **views**.  Lets start off by creating a couple labels.
+First of all we need a UI element to animate.  In this tutorial we will demonstrate animating **labels** and **views**.  Let's start off by creating a couple labels.
 
 ~~~
 openingLabel = Titanium.UI.createLabel({
     text:'Happy Festivus',
     top: Math.round(Titanium.Platform.displayCaps.platformHeight * 0.30),
 	height: 'auto',
-	width:'auto',	
+	width:'auto',
     shadowColor:'#aaa',
     shadowOffset:{x:3,y:3},
     color:'#900',
@@ -42,7 +42,7 @@ closingLabel = Titanium.UI.createLabel({
 	opacity: 0
 });
 ~~~
-We'll use the **openingLabel** to demonstrate 3D matrix transforms and save the **closingLabel** for demonstrating [opacity animation](ui_design.html#opacity).  Lets take a closer look at **openingLabel** first.  We already have our label so lets go ahead and create a 3D matrix that we will use as part of the animation:
+We'll use the **openingLabel** to demonstrate 3D matrix transforms and save the **closingLabel** for demonstrating [opacity animation](ui_design.html#opacity).  Let's take a closer look at **openingLabel** first.  We already have our label so let's go ahead and create a 3D matrix that we will use as part of the animation:
 
 ~~~
 var olt = Titanium.UI.create3DMatrix();
@@ -52,7 +52,7 @@ olt = olt.translate(20,50,170);
 olt.m34 = 1.0/-3000;
 ~~~
 
-[2D](ui_design.html#2d_matrix) & [3D](ui_design.html#3d_matrix) matrices provide a number of methods that allow us to operate on the newly created matrix.  Refer to the [Titanium.UI.2DMatrix](https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.2DMatrix) & [Titanium.UI.3DMatrix](https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.3DMatrix) API Docs for more information on these.
+[2D](ui_design.html#2d_matrix) & [3D](ui_design.html#3d_matrix) matrices provide a number of methods that allow us to operate on the newly created matrix.  Refer to the [Titanium.UI.2DMatrix](https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.2DMatrix) & [Titanium.UI.3DMatrix](https://developer.appcelerator.com/apidoc/mobile/1.0/Titanium.UI.3DMatrix) API Docs for more information on these. If you need a quick synopsis on the fundamentals of transforms, we recommend the article at eleqtriq.com entitled, [The Matrix Revolutions](http://www.eleqtriq.com/2010/05/css-3d-matrix-transformations/).
 
 #Starting an Animation
 
@@ -60,18 +60,18 @@ To animate our label we call the **animate** method on our label passing it an o
 
 ~~~
 openingLabel.animate(
-    {transform: olt, duration: 1500}, 
+    {transform: olt, duration: 1500},
     function() {
 	    //Tasks to perform after the animation has completed
     });
 ~~~
 
-When applied to our **openingLabel** the result is a label that grows, spins, and eventually moves out of view.
+When applied to our **openingLabel**, the result is a label that grows, spins, and eventually moves out of view.
 
 
 #Using Animation Objects
 
-The animation object is used for specifying lower-level animation properties and more low-level control of events during an animation. An animation object can be created via Titanium.UI.createAnimation.  We'll make use of this to animate the **closingLabel** in this example.  The **closingLabel** is initially hidden via opacity 0.  Lets look at how we can animate the opacity of this UI element and scale it at the same time.  This will enable us to create an appear/zoom effect for the closing credits of this example.
+The animation object is used for specifying lower-level animation properties and more low-level control of events during an animation. An animation object can be created via Titanium.UI.createAnimation.  We'll make use of this to animate the **closingLabel** in this example.  The **closingLabel** is initially hidden via opacity 0.  Let's look at how we can animate the opacity of this UI element and scale it at the same time.  This will enable us to create an appear/zoom effect for the closing credits of this example.
 
 ~~~
 closingLabel.animate(Titanium.UI.createAnimation({
@@ -89,7 +89,7 @@ Over the course of 2500 milliseconds this label will grow 1.5x the size and fade
 
 ![Snowflake](http://developer.appcelerator.com.s3.amazonaws.com/documentation-examples/animation_snowflake_example.jpg "Snowflake example")
 
-Of course the most interesting part of this example is the falling snowflakes.  Lets review how such an effect might be created.  Snowflakes come in all shapes and sizes.  Their path to the ground is influenced by things like wind and other objects meet in flight.  To imitate such behavior we'll need to create **views** of varying shapes, sizes, angles, etc.  We'll also need to randomize the location the start their journey and their path to the ground.  We'll make use of the Animation object, 2D matrices, opacity, duration, etc.  Lets start by creating a few helper functions:
+Of course the most interesting part of this example is the falling snowflakes.  Let's review how such an effect might be created.  Snowflakes come in all shapes and sizes.  Their path to the ground is influenced by things like wind and other objects they meet in flight.  To imitate such behavior we'll need to create **views** of varying shapes, sizes, angles, etc.  We'll also need to randomize the location they start their journey and their path to the ground.  We'll make use of the Animation object, 2D matrices, opacity, duration, etc.  Let's start by creating a few helper functions:
 
 ~~~
 //Used to randomize a logo's initial left position
@@ -105,11 +105,11 @@ function getRandomLeftPostion() {
 function getRandomTransform() {
 	var rotateVal  = Math.floor(Math.random()*100),
 		scalingVal = 0;
-	
+
 	while (scalingVal < 0.1) {
 		scalingVal = Math.random().toFixed(1);
 	}
-	
+
 	return Titanium.UI.create2DMatrix({
 		rotate: rotateVal,
 		scale: scalingVal
@@ -121,7 +121,7 @@ function getImageViewToAnimate() {
     //We'll alternate between two background images
 	bImage = (viewBackgroundImage === 'appcelerator' ? 'snowflake' : 'appcelerator');
 	viewBackgroundImage = bImage;
-	
+
 	return Titanium.UI.createView({
 		backgroundImage:'images/' + bImage + '.png',
 		top: Math.floor(Math.random()*200), //start anywhere from top 0 to 200
