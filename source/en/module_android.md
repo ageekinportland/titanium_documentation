@@ -363,22 +363,22 @@ To ensure that a method is executed on the UI thread, you can use [@Kroll.method
     }
 </code>
 
-[@Kroll.proxy]: http://builds.appcelerator.com.s3.amazonaws.com/mobile/master/android/javadoc/org/appcelerator/kroll/annotations/Kroll.proxy.html
-[@Kroll.proxy#creatableInModule]: http://builds.appcelerator.com.s3.amazonaws.com/mobile/master/android/javadoc/org/appcelerator/kroll/annotations/Kroll.proxy.html#creatableInModule()
-[@Kroll.module]: http://builds.appcelerator.com.s3.amazonaws.com/mobile/master/android/javadoc/org/appcelerator/kroll/annotations/Kroll.module.html
-[@Kroll.method]: http://builds.appcelerator.com.s3.amazonaws.com/mobile/master/android/javadoc/org/appcelerator/kroll/annotations/Kroll.method.html
-[@Kroll.method#runOnUiThread]: http://builds.appcelerator.com.s3.amazonaws.com/mobile/master/android/javadoc/org/appcelerator/kroll/annotations/Kroll.method.html#runOnUiThread()
-[@Kroll.getProperty]: http://builds.appcelerator.com.s3.amazonaws.com/mobile/master/android/javadoc/org/appcelerator/kroll/annotations/Kroll.getProperty.html
-[@Kroll.setProperty]: http://builds.appcelerator.com.s3.amazonaws.com/mobile/master/android/javadoc/org/appcelerator/kroll/annotations/Kroll.setProperty.html
-[@Kroll.property]: http://builds.appcelerator.com.s3.amazonaws.com/mobile/master/android/javadoc/org/appcelerator/kroll/annotations/Kroll.property.html
-[@Kroll.constant]: http://builds.appcelerator.com.s3.amazonaws.com/mobile/master/android/javadoc/org/appcelerator/kroll/annotations/Kroll.constant.html
+[@Kroll.proxy]: http://builds.appcelerator.com.s3.amazonaws.com/javadoc/org/appcelerator/kroll/annotations/Kroll.proxy.html
+[@Kroll.proxy#creatableInModule]: http://builds.appcelerator.com.s3.amazonaws.com/javadoc/org/appcelerator/kroll/annotations/Kroll.proxy.html#creatableInModule()
+[@Kroll.module]: http://builds.appcelerator.com.s3.amazonaws.com/javadoc/org/appcelerator/kroll/annotations/Kroll.module.html
+[@Kroll.method]: http://builds.appcelerator.com.s3.amazonaws.com/javadoc/org/appcelerator/kroll/annotations/Kroll.method.html
+[@Kroll.method#runOnUiThread]: http://builds.appcelerator.com.s3.amazonaws.com/javadoc/org/appcelerator/kroll/annotations/Kroll.method.html#runOnUiThread()
+[@Kroll.getProperty]: http://builds.appcelerator.com.s3.amazonaws.com/javadoc/org/appcelerator/kroll/annotations/Kroll.getProperty.html
+[@Kroll.setProperty]: http://builds.appcelerator.com.s3.amazonaws.com/javadoc/org/appcelerator/kroll/annotations/Kroll.setProperty.html
+[@Kroll.property]: http://builds.appcelerator.com.s3.amazonaws.com/javadoc/org/appcelerator/kroll/annotations/Kroll.property.html
+[@Kroll.constant]: http://builds.appcelerator.com.s3.amazonaws.com/javadoc/org/appcelerator/kroll/annotations/Kroll.constant.html
 
-[KrollProxy]: http://builds.appcelerator.com.s3.amazonaws.com/mobile/master/android/javadoc/org/appcelerator/kroll/KrollProxy.html
-[KrollModule]: http://builds.appcelerator.com.s3.amazonaws.com/mobile/master/android/javadoc/org/appcelerator/kroll/KrollModule.html
-[KrollInvocation]: http://builds.appcelerator.com.s3.amazonaws.com/mobile/master/android/javadoc/org/appcelerator/kroll/KrollInvocation.html
+[KrollProxy]: http://builds.appcelerator.com.s3.amazonaws.com/javadoc/org/appcelerator/kroll/KrollProxy.html
+[KrollModule]: http://builds.appcelerator.com.s3.amazonaws.com/javadoc/org/appcelerator/kroll/KrollModule.html
+[KrollInvocation]: http://builds.appcelerator.com.s3.amazonaws.com/javadoc/org/appcelerator/kroll/KrollInvocation.html
 
-[TiViewProxy]: http://builds.appcelerator.com.s3.amazonaws.com/mobile/master/android/javadoc/org/appcelerator/titanium/proxy/TiViewProxy.html
-[TiUIView]: http://builds.appcelerator.com.s3.amazonaws.com/mobile/master/android/javadoc/org/appcelerator/titanium/view/TiUIView.html
+[TiViewProxy]: http://builds.appcelerator.com.s3.amazonaws.com/javadoc/org/appcelerator/titanium/proxy/TiViewProxy.html
+[TiUIView]: http://builds.appcelerator.com.s3.amazonaws.com/javadoc/org/appcelerator/titanium/view/TiUIView.html
 [ButtonProxy]: http://github.com/appcelerator/titanium_mobile/blob/master/android/modules/ui/src/ti/modules/titanium/ui/ButtonProxy.java
 [TiUIButton]: http://github.com/appcelerator/titanium_mobile/blob/master/android/modules/ui/src/ti/modules/titanium/ui/widget/TiUIButton.java
 
