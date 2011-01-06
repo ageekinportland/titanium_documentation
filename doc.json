@@ -231,6 +231,14 @@
 		},
 		{
 			"section":"Tools",
+			"name":"Titanium Ubuntu Installer (TUI)",
+			"source":"titanium_ubuntu_installer.md",
+			"template":"guide.html",
+			"description": "An Ubuntu installer image containing pre-configured Titanium environment and tools.",
+			"menu":"right"
+		},
+		{
+			"section":"Tools",
 			"name":"Third-party Tools",
 			"source":"tool_thirdparty.md",
 			"template":"guide.html",
