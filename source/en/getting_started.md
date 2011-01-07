@@ -109,24 +109,24 @@ The following table explains the significance of these packages.
 </tr>
 <tr>
   <td>Android SDK Tools</td>
-  <td>Contains tools that Titanium Developer requires to function</td>
+  <td><em>Contains tools that Titanium Developer requires to function</em></td>
   <td>rev 8</td>
 </tr>
 <tr>
   <td>Android SDK Platform-tools</td>
-  <td>Contains tools such as adb that Titanium Developer requires to function</td>
+  <td><em>Contains tools such as adb that Titanium Developer requires to function</em></td>
   <td>rev 1</td>
 </tr>
 <tr>
   <td>SDK Platform Android x, API y</td>
-  <td>[Android OS version x, plus *support* for API y]<br />
+  <td><em>Android OS version x, plus *support* for API y</em><br />
 		  Note, some devices are only licensed to use the standard Android OS API, and so will not support advanced features such as maps etc. The advanced API must be installed separately (see below)
   </td>
   <td>1.6<br />2.1-update1<br />2.2</td>
 </tr>
 <tr>
   <td>Google APIs by Google Inc., Android API y</td>
-  <td>[Google API version y]<br />Note, the API is only necessary when developing for devices licensed to use advanced API features (although, most do). The API will only be usable if an Android OS is installed that specifically supports it (see above)</td>
+  <td><em>Google API version y</em><br />Note, the API is only necessary when developing for devices licensed to use advanced API features (although, most do). The API will only be usable if an Android OS is installed that specifically supports it (see above)</td>
   <td>API 4 rev 2<br />API 7 rev 1<br />API 8 rev 2</td>
 </tr>
 </table>
@@ -135,7 +135,17 @@ The following table explains the significance of these packages.
 
 ![android-virtual-devices-screenshot](../assets/images/guides/getting_started/android-virtual-devices.png)
 
-It is definitely worth your time to browse the [Android SDK documentation](http://developer.android.com/guide/index.html) for more about all the tools available to you with the Android SDK.
+Titanium Developer expects the `adb` executable to be in the same location as the `android` tool, ie `[SDK HOME]/tools`, but Google has recently moved it to `[SDK HOME]/platform-tools`. Thus, it is necessary to either make a duplicate of `adb` and place it into `[SDK HOME]/tools` or, if the OS supports it, you can create a symbolic link:
+
+<code>
+cd [SDK HOME]/tools
+ln -s [SDK HOME]/platform-tools/adb
+</code>
+
+The advantage of using a symbolic link is that in the event that Android updates the `adb` executable in its original location, there will be no need for you to copy over the new file to `[SDK HOME]/tools` again.
+
+You can find out more about the Android tools available to you in the [Android SDK documentation](http://developer.android.com/guide/index.html).
+
 
 ## Preparing for BlackBerry development
 
