@@ -95,17 +95,47 @@ javac -version
 The default executables can be controlled by adjusting your system's PATH variable.
 </info>
 
-For Android, you will need to [download and unzip the Android SDK](http://developer.android.com/sdk/index.html) somewhere on your
-system.  Once unzipped, run the `android` command from `[SDK HOME]/tools`.  This will bring up an attractive Java Swing UI which
-will allow you to install the various Android SDK flavors.  In order to create a project, Titanium requires Android 1.6 (APIs level 4),
-and version 6 of the Android tools or better to be installed through this tool:
+For Android, you will need to [download and unzip the Android SDK](http://developer.android.com/sdk/index.html) somewhere on your system.  Once unzipped, run the `android` command from `[SDK HOME]/tools`.  This will bring up an attractive Java Swing UI which will allow you to install the various Android SDK components from the "Available Packages" side menu.
 
-![img](http://developer.appcelerator.com.s3.amazonaws.com/documentation-examples/gs_android.png)
+As a general rule, the "Installed Packages" menu screen should show the following packages installed:
 
-You may want to download any additional Android OS versions you'd like to test against at this time.  Currently, Titanium Mobile supports
-Android OS versions 1.6, 2.1, and 2.2.  OS versions are available for download under the "Available Packages" heading in the `android`
-tool. It is definitely worth your time to browse the [Android SDK documentation](http://developer.android.com/guide/index.html) for more
-on the tools available to you with the Android SDK.
+![android-installed-packages-screenshot](../assets/images/guides/getting_started/android-installed-packages.png)
+
+The following table explains the significance of these packages.
+
+<table>
+<tr>
+<th>Package Type</th><th>Description</th><th>Supported Versions</th>
+</tr>
+<tr>
+  <td>Android SDK Tools</td>
+  <td>Contains tools that Titanium Developer requires to function</td>
+  <td>rev 8</td>
+</tr>
+<tr>
+  <td>Android SDK Platform-tools</td>
+  <td>Contains tools such as adb that Titanium Developer requires to function</td>
+  <td>rev 1</td>
+</tr>
+<tr>
+  <td>SDK Platform Android x, API y</td>
+  <td>[Android OS version x, plus *support* for API y]<br />
+		  Note, some devices are only licensed to use the standard Android OS API, and so will not support advanced features such as maps etc. The advanced API must be installed separately (see below)
+  </td>
+  <td>1.6<br />2.1-update1<br />2.2</td>
+</tr>
+<tr>
+  <td>Google APIs by Google Inc., Android API y</td>
+  <td>[Google API version y]<br />Note, the API is only necessary when developing for devices licensed to use advanced API features (although, most do). The API will only be usable if an Android OS is installed that specifically supports it (see above)</td>
+  <td>API 4 rev 2<br />API 7 rev 1<br />API 8 rev 2</td>
+</tr>
+</table>
+
+<warning>Every time you install or uninstall Android packages, it is crucial that you delete all of your virtual devices from the "Virtual Devices" screen (see screenshot below). A valid AVD will then automatically be recreated next time you launch your application from Titanium Developer.</warning>
+
+![android-virtual-devices-screenshot](../assets/images/guides/getting_started/android-virtual-devices.png)
+
+It is definitely worth your time to browse the [Android SDK documentation](http://developer.android.com/guide/index.html) for more about all the tools available to you with the Android SDK.
 
 ## Preparing for BlackBerry development
 
