@@ -135,7 +135,7 @@ The following table explains the significance of these packages.
 
 ![android-virtual-devices-screenshot](../assets/images/guides/getting_started/android-virtual-devices.png)
 
-Titanium Developer expects the `adb` executable to be in the same location as the `android` tool, ie `[SDK HOME]/tools`, but Google has recently moved it to `[SDK HOME]/platform-tools`. Thus, it is necessary to either make a duplicate of `adb` and place it into `[SDK HOME]/tools` or, if the OS supports it, you can create a symbolic link:
+Titanium Developer expects the `adb` executable to be in the same location as the `android` tool, ie `[SDK HOME]/tools`, but Google has recently moved it to `[SDK HOME]/platform-tools`. Thus, it is necessary to either make a duplicate of `adb` and place it into `[SDK HOME]/tools` or, **if the OS supports it**, you can create a symbolic link:
 
 <code>
 cd [SDK HOME]/tools
